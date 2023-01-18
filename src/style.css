@@ -11,28 +11,30 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(234, 234, 234);
+    background: rgb(214, 214, 214);
 }
 
 .toDo-container {
-    background: aqua;
+    background: #FFF;
     height: auto;
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: 1px solid rgb(121, 121, 121);
+    box-shadow: 10px 10px 50px 15px grey;
 }
 
 .toDo-container h1 {
     text-align: center;
     font-size: 30px;
+    border-bottom: 1px solid #000;
 }
 
 /* To Do header */
 
 .toDo-header {
-    background: gold;
+    background: rgb(233, 233, 233);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,9 +51,9 @@ body {
 /* To Do input */
 
 .toDo-input {
-    background: greenyellow;
     display: flex;
     padding: 5px;
+    border-bottom: 1px solid rgb(212, 212, 212);
 }
 
 .toDo-input input {
@@ -73,13 +75,11 @@ body {
 /* To Do list */
 
 .todo-list {
-    background: green;
     width: 93%;
     margin: auto;
 }
 
 .todo-list li{
-    background: rgb(81, 81, 215);
     margin: auto;
     list-style: none;
     display: flex;
@@ -102,11 +102,19 @@ body {
     color: rgb(159, 159, 159);
 }
 .btn button{
-    background: rgb(130, 91, 91);
     width: 100%;
     border: none;
     font-size: 25px;
     padding: 10px;
     border-top: 1px solid #000;
+    cursor: pointer;
+    color: rgb(109, 109, 109);
 }
 
+/* Styling for the mobile version */
+
+@media screen and (max-width: 768px) {
+    .toDo-container {
+        width: 95%;
+    }
+  }
