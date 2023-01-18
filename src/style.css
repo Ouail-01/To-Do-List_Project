@@ -41,29 +41,72 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.toDo-header i{
+    font-size: 20px;
+    color: rgb(159, 159, 159);
+}
+
 /* To Do input */
 
 .toDo-input {
     background: greenyellow;
     display: flex;
-
-    padding: 15px;
-    
+    padding: 5px;
 }
 
 .toDo-input input {
     width: 100%;
     border: none;
-    color: rgb(159, 159, 159);
     padding-left: 10px;
+    height: 40px;
 }
 
 .toDo-input button {
     border: none;
 }
 
-.toDo-input button {
+.toDo-input i{
     font-size: 20px;
     color: rgb(159, 159, 159);
+}
+
+/* To Do list */
+
+.todo-list {
+    background: green;
+    width: 93%;
+    margin: auto;
+}
+
+.todo-list li{
+    background: rgb(81, 81, 215);
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.list-input {
+    background: #000;
+    padding: 30px;
+}
+
+.list-label {
+    font-size: 20px;
+    font-family: 'Sofia Sans', sans-serif;
+}
+
+.todo-list i{
+    font-size: 20px;
+    color: rgb(159, 159, 159);
+}
+.btn button{
+    background: rgb(130, 91, 91);
+    width: 100%;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    border-top: 1px solid #000;
 }
 
