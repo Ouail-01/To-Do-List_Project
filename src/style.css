@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Sofia+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* fonts: Sofia Sans ++ Open Sans */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+}
+
+.toDo-container {
+    background: aqua;
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
