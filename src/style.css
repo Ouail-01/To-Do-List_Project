@@ -1,120 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Sofia+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
 /* fonts: Sofia Sans ++ Open Sans */
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgb(214, 214, 214);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(214, 214, 214);
 }
 
 .toDo-container {
-    background: #FFF;
-    height: auto;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 1px solid rgb(121, 121, 121);
-    box-shadow: 10px 10px 50px 15px grey;
+  background: #fff;
+  height: auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(121, 121, 121);
+  box-shadow: 10px 10px 50px 15px grey;
 }
 
 .toDo-container h1 {
-    text-align: center;
-    font-size: 30px;
-    border-bottom: 1px solid #000;
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid #000;
 }
 
 /* To Do header */
 
 .toDo-header {
-    background: rgb(233, 233, 233);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    border-bottom: 1px solid #000;
-    font-family: 'Open Sans', sans-serif;
+  background: rgb(233, 233, 233);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #000;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.toDo-header i{
-    font-size: 20px;
-    color: rgb(159, 159, 159);
+.toDo-header i {
+  font-size: 20px;
+  color: rgb(159, 159, 159);
 }
 
 /* To Do input */
 
 .toDo-input {
-    display: flex;
-    padding: 5px;
-    border-bottom: 1px solid rgb(212, 212, 212);
+  display: flex;
+  padding: 5px;
+  border-bottom: 1px solid rgb(212, 212, 212);
 }
 
 .toDo-input input {
-    width: 100%;
-    border: none;
-    padding-left: 10px;
-    height: 40px;
+  width: 100%;
+  border: none;
+  padding-left: 10px;
+  height: 40px;
 }
 
 .toDo-input button {
-    border: none;
+  border: none;
 }
 
-.toDo-input i{
-    font-size: 20px;
-    color: rgb(159, 159, 159);
+.toDo-input i {
+  font-size: 20px;
+  color: rgb(159, 159, 159);
 }
 
 /* To Do list */
 
 .todo-list {
-    width: 93%;
-    margin: auto;
+  width: 93%;
+  margin: auto;
 }
 
-.todo-list li{
-    margin: auto;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
+.todo-list li {
+  margin: auto;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
 }
 
 .list-input {
-    background: #000;
-    padding: 30px;
+  background: #000;
+  padding: 30px;
 }
 
 .list-label {
-    font-size: 20px;
-    font-family: 'Sofia Sans', sans-serif;
+  font-size: 20px;
+  font-family: 'Sofia Sans', sans-serif;
 }
 
-.todo-list i{
-    font-size: 20px;
-    color: rgb(159, 159, 159);
+.todo-list i {
+  font-size: 20px;
+  color: rgb(159, 159, 159);
 }
-.btn button{
-    width: 100%;
-    border: none;
-    font-size: 25px;
-    padding: 10px;
-    border-top: 1px solid #000;
-    cursor: pointer;
-    color: rgb(109, 109, 109);
+
+.btn button {
+  width: 100%;
+  border: none;
+  font-size: 25px;
+  padding: 10px;
+  border-top: 1px solid #000;
+  cursor: pointer;
+  color: rgb(109, 109, 109);
 }
 
 /* Styling for the mobile version */
 
 @media screen and (max-width: 768px) {
-    .toDo-container {
-        width: 95%;
-    }
+  .toDo-container {
+    width: 95%;
   }
+}
