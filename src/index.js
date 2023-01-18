@@ -25,8 +25,8 @@ const autoFillData = () => {
     taskStorage.forEach((i) => {
         show += `<li class="task-item" id="${i.id}">
         <div>
-            <input type="checkbox" id="${i.id} ${i.completed ? 'checked' : ''}">
-            <label type="text" for="${i.id}" id="${i.id}">${i.description}</label>
+            <input type="checkbox" class="list-input" id="${i.id} ${i.completed ? 'checked' : ''}">
+            <label type="text" class="list-label" for="${i.id}" id="${i.id}">${i.description}</label>
         </div>
         <i class="fas fa-ellipsis-v resize" id="${i.id}"></i>
         </li>`;
