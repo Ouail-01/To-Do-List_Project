@@ -1,5 +1,6 @@
+/* eslint-disable import/no-cycle */
 import './style.css';
-import updating from './updating.js';
+import updating from './modules/updating.js';
 
 const todoList = document.querySelector('.todo-list');
 const todoTask = document.getElementById('todo-task');
