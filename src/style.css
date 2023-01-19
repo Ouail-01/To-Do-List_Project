@@ -113,6 +113,11 @@ body {
   color: rgb(109, 109, 109);
 }
 
+.line-through {
+  text-decoration: line-through;
+  color: green;
+}
+
 /* Styling for the mobile version */
 
 @media screen and (max-width: 768px) {
