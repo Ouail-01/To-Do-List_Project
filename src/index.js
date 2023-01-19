@@ -30,3 +30,38 @@ const getToDos = () => {
   });
   todoList.innerHTML = show;
 };
+
+const saveToDos = ({ index, description, completed = false }) => {
+  storedToDos = [];
+  if (localStorage.getItem('toDos') === null) {
+    storedToDos = [];
+  } else {
+    storedToDos = JSON.parse(localStorage.getItem('toDos'));
+  }
+
+  storedToDos.push({ index, description, completed });
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+  getToDos();
+};
+
+const saveEdittedTask = (task) => {
+  const myTask = storedToDos[task];
+  myTask.description = todoTask.value;
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+};
+
+const completedTask = (task) => {
+  const input = task.querySelector('input');
+  const label = task.querySelector('label');
+  const todoItem = storedToDos[task.id];
+  if (input.checked) {
+    todoItem.completed = true;
+    label.style.textDecoration = 'line-through';
+    input.style.textDecoration = 'line-through';
+  } else {
+    todoItem.completed = false;
+    label.style.textDecoration = 'none';
+  }
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+  getToDos();
+};
