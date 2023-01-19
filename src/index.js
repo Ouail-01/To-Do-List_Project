@@ -1,36 +1,32 @@
 import './style.css';
+import updating from './updating.js';
 
 const todoList = document.querySelector('.todo-list');
+const todoTask = document.getElementById('todo-task');
+const addTaskBtn = document.getElementById('add-task-btn');
+let storedToDos = [];
+let editIndex = null;
 
-const taskStorage = [
-  {
-    id: 0,
-    description: 'Watch some courses',
-    completed: true,
-  },
-  {
-    id: 1,
-    description: 'Watch some tuto',
-    completed: true,
-  },
-  {
-    id: 2,
-    description: 'Complete the week',
-    completed: false,
-  },
-];
-
-const autoFillData = () => {
+const getToDos = () => {
+  if (localStorage.getItem('toDos') === null) {
+    storedToDos = [];
+  } else {
+    storedToDos = JSON.parse(localStorage.getItem('toDos'));
+  }
   let show = '';
-  taskStorage.forEach((i) => {
-    show += `<li class="task-item" id="${i.id}">
-        <div>
-            <input type="checkbox" class="list-input" id="${i.id} ${i.completed ? 'checked' : ''}">
-            <label type="text" class="list-label" for="${i.id}" id="${i.id}">${i.description}</label>
-        </div>
-        <i class="fas fa-ellipsis-v resize" id="${i.id}"></i>
-        </li>`;
+  storedToDos.forEach((task, index) => {
+    const completed = task.completed ? 'line-through' : '';
+    show += `
+    <li class="task-item ${completed}" id=${index}>
+    <div>
+    <input class="list-input input checkbox" type="checkbox" id=${index} ${task.completed ? 'checked' : ''}>
+    <label for="${index}" class='list-label label'>${task.description}</label>
+    </div>
+    <div>
+    <i class="fas fa-trash delete resize" id=${index}></i>
+    <i class="fas fa-edit edit resize" id=${index}></i>
+    </div> 
+    </li>`;
   });
   todoList.innerHTML = show;
 };
-autoFillData();
