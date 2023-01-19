@@ -65,3 +65,35 @@ const completedTask = (task) => {
   localStorage.setItem('toDos', JSON.stringify(storedToDos));
   getToDos();
 };
+
+const resetIndexes = (arr) => arr.forEach((item, idx) => { item.index = idx; });
+
+const deleteTask = (task) => {
+  const item = storedToDos[task];
+  storedToDos = storedToDos.filter((todo) => todo !== item);
+  resetIndexes(storedToDos);
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+  getToDos();
+};
+
+const editTask = (task) => {
+  editIndex = task;
+  const taskToEdit = storedToDos[task];
+  todoTask.value = taskToEdit.description;
+  todoTask.focus();
+};
+
+addTaskBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (!todoTask.value) return;
+
+  if (editIndex != null) {
+    saveEdittedTask(editIndex);
+    editIndex = null;
+  } else {
+    saveToDos({ index: storedToDos.length, description: todoTask.value, completed: false });
+  }
+
+  getToDos();
+  todoTask.value = '';
+});
