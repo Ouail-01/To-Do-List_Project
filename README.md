@@ -23,8 +23,7 @@
 
 # 📖 [To-Do-List Project] <a name="about-project"></a>
 
-**[To-Do-List Project]** This project build with a simple HTML list of To Do tasks. The list will be styled according to the specifications listed later in this repo. This simple web page will be built using webpack and served by a webpack dev server.
-
+**[To-Do-List Project]** In this project, I implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -56,7 +55,7 @@
 
 >
 
-- [Live Demo]()
+- (Not available now)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
