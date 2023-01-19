@@ -33,6 +33,7 @@ const getToDos = () => {
 };
 
 const saveToDos = ({ index, description, completed = false }) => {
+  index += 1;
   storedToDos = [];
   if (localStorage.getItem('toDos') === null) {
     storedToDos = [];
@@ -67,7 +68,7 @@ const completedTask = (task) => {
   getToDos();
 };
 
-const resetIndexes = (arr) => arr.forEach((item, idx) => { item.index = idx; });
+const resetIndexes = (arr) => arr.forEach((item, idx) => { item.index = idx + 1; });
 
 const deleteTask = (task) => {
   const item = storedToDos[task];
