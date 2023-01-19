@@ -97,3 +97,12 @@ addTaskBtn.addEventListener('click', (e) => {
   getToDos();
   todoTask.value = '';
 });
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && todoTask.value) {
+    addTaskBtn.click();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', getToDos);
+todoList.addEventListener('click', updating);
