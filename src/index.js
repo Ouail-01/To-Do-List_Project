@@ -106,3 +106,7 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', getToDos);
 todoList.addEventListener('click', updating);
+
+export {
+  deleteTask, completedTask, editTask,
+};
