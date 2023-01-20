@@ -1,5 +1,5 @@
 /* eslint-disable import/no-cycle */
-import { completedTask, deleteTask, editTask } from '../index.js';
+import { completedTask, deleteTask, editTask, clearTaskCompleted } from '../index.js';
 
 const statusUpdate = (e) => {
   const item1 = e.target;
@@ -17,6 +17,10 @@ const statusUpdate = (e) => {
   if (item1.classList.contains('edit')) {
     const itemm = item1.parentElement.parentElement.id;
     editTask(itemm);
+  }
+
+  if (item1.classList.contains("clear-all")) {
+    clearTaskCompleted();
   }
 };
 
