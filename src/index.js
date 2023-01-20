@@ -86,6 +86,13 @@ const editTask = (task) => {
   todoTask.focus();
 };
 
+const clearTaskCompleted = () => {
+  storedToDos = storedToDos.filter((todo) => !todo.completed);
+  resetIndexes(storedToDos);
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+  getToDos();
+};
+
 addTaskBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!todoTask.value) return;
