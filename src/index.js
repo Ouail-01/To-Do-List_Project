@@ -5,6 +5,7 @@ import updating from './modules/updating.js';
 const todoList = document.querySelector('.todo-list');
 const todoTask = document.getElementById('todo-task');
 const addTaskBtn = document.getElementById('add-task-btn');
+const taskCompleted = document.getElementById("clear-all-btn");
 let storedToDos = [];
 let editIndex = null;
 
