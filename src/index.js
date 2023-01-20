@@ -5,6 +5,7 @@ import updating from './modules/updating.js';
 const todoList = document.querySelector('.todo-list');
 const todoTask = document.getElementById('todo-task');
 const addTaskBtn = document.getElementById('add-task-btn');
+const taskCompleted = document.getElementById('clear-all-btn');
 let storedToDos = [];
 let editIndex = null;
 
@@ -85,6 +86,13 @@ const editTask = (task) => {
   todoTask.focus();
 };
 
+const clearTaskCompleted = () => {
+  storedToDos = storedToDos.filter((todo) => !todo.completed);
+  resetIndexes(storedToDos);
+  localStorage.setItem('toDos', JSON.stringify(storedToDos));
+  getToDos();
+};
+
 addTaskBtn.addEventListener('click', (e) => {
   e.preventDefault();
   if (!todoTask.value) return;
@@ -108,7 +116,8 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', getToDos);
 todoList.addEventListener('click', updating);
+taskCompleted.addEventListener('click', updating);
 
 export {
-  deleteTask, completedTask, editTask,
+  deleteTask, completedTask, editTask, clearTaskCompleted,
 };

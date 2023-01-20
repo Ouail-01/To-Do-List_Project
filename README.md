@@ -23,7 +23,7 @@
 
 # 📖 [To-Do-List Project] <a name="about-project"></a>
 
-**[To-Do-List Project]** In this project, I implement the CRUD (create, read, update, delete) methods. All the elements of the user interface will be fully functional.
+**[To-Do-List Project]** "To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. You will build a simple website that allows for doing that, and you will do it using ES6 and Webpack!
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -53,9 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->
-
-- (Not available now)
+> [Live Demo](https://ouail-01.github.io/To-Do-List_Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
