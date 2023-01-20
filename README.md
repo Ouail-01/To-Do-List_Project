@@ -53,9 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
->
-
-- (Not available now)
+> [Live Demo](https://ouail-01.github.io/To-Do-List_Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
