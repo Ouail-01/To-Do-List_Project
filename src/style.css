@@ -96,6 +96,7 @@ body {
 .list-label {
   font-size: 20px;
   font-family: 'Sofia Sans', sans-serif;
+  margin-left: 10px;
 }
 
 .todo-list i {
