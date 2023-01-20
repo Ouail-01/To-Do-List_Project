@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Ouail-01/To-Do-List_Project/issues"
   },
-  "homepage": "https://github.com/Ouail-01/To-Do-List_Project#readme",
+  "homepage": "https://ouail-01.github.io/To-Do-List_Project/dist/",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.5.1",
