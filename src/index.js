@@ -5,7 +5,7 @@ import updating from './modules/updating.js';
 const todoList = document.querySelector('.todo-list');
 const todoTask = document.getElementById('todo-task');
 const addTaskBtn = document.getElementById('add-task-btn');
-const taskCompleted = document.getElementById("clear-all-btn");
+const taskCompleted = document.getElementById('clear-all-btn');
 let storedToDos = [];
 let editIndex = null;
 
@@ -116,7 +116,7 @@ document.addEventListener('keydown', (e) => {
 
 document.addEventListener('DOMContentLoaded', getToDos);
 todoList.addEventListener('click', updating);
-taskCompleted.addEventListener("click", updating);
+taskCompleted.addEventListener('click', updating);
 
 export {
   deleteTask, completedTask, editTask, clearTaskCompleted,
